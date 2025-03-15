@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginPage from "./components/LoginPage"; // ✅ Ensure the path is correct
-import Sidebar from "./components/Sidebar"; // ✅ Ensure Sidebar exists
+import LoginPage from "./components/LoginPage";
+import Sidebar from "./components/Sidebar"; 
 import HeroSection from "./components/HeroSection";
 
 function App() {

@@ -1,107 +1,195 @@
 /* Hero Section Container */
 .hero-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(45deg, #121212, #1f1f1f); /* Dark background with a gradient */
-    color: white;
-    text-align: center;
-    padding: 0 20px;
-    position: relative; /* To position the admin button absolutely */
-  }
-  
-  /* Admin Button (Top-Right Corner) */
-  .admin-btn-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  
-  .admin-btn {
-    font-family: "Rubik Mono One", monospace;
-    font-style: normal;
-    background-color: #1da1f2;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 100;
-  }
-  
-  .admin-btn:hover {
-    background-color: #0d8af2; /* Darker blue for hover effect */
-  }
-  
-  /* Hero Content Styling */
-  .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Hero Title */
-  .hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #1da1f2; /* Blue for the title */
-    font-family: "Rubik Mono One", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #121212, #1f1f1f); /* Dark background with a gradient */
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative; /* To position the admin button absolutely */
+}
+
+/* Admin Button (Top-Right Corner) */
+.admin-btn-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.admin-btn {
+  font-family: "Rubik Mono One", monospace;
+  font-style: normal;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 100;
+}
+
+.admin-btn:hover {
+  background-color: #0d8af2; /* Darker blue for hover effect */
+}
+
+/* Hero Content Styling */
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #1da1f2; /* Blue for the title */
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+  font-family: monospace;
+  font-weight: 300; /* Lighter weight */
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #e0e0e0; /* Light grey for subtitle */
+}
+
+/* Button Container */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Primary Button (Register Now) */
+.cta-btn-primary {
+  background-color: #1da1f2;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-btn-primary:hover {
+  background-color: #0d8af2; /* Darker blue for hover effect */
+}
+
+/* Secondary Button (Learn More) */
+.cta-btn-secondary {
+  background-color: transparent;
+  color: #1da1f2;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: 2px solid #1da1f2;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn-secondary:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+/* Overlay effect to blur background */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+  backdrop-filter: blur(8px); /* Apply blur effect to the background */
+  z-index: 1; /* Make sure overlay is on top of hero section */
+}
+
+/* Registration Form styling */
+/* Registration Form styling */
+.registration-form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2b2b2b;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: left; /* Align form content to the left */
+  z-index: 2; /* Ensure form is above the overlay */
+}
+
+/* Make form labels and inputs align properly */
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds spacing between form elements */
+}
+
+.registration-form h2{
+  font-family: "Rubik Mono One", monospace;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  /* Hero Subtitle */
-  .hero-subtitle {
-    font-family:  monospace;
-    font-weight: 300; /* Lighter weight */
+}
+
+/* Form group for each label-input pair */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns labels and inputs to the left */
+}
+
+.form-group label {
+  font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
     font-style: normal;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    line-height: 1.6;
-    color: #e0e0e0; /* Light grey for subtitle */
-  }
-  
-  /* Button Container */
-  .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  /* Primary Button (Register Now) */
-  .cta-btn-primary {
-    background-color: #1da1f2;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .cta-btn-primary:hover {
-    background-color: #0d8af2; /* Darker blue for hover effect */
-  }
-  
-  /* Secondary Button (Learn More) */
-  .cta-btn-secondary {
-    background-color: transparent;
-    color: #1da1f2;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border: 2px solid #1da1f2;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
-  
-  .cta-btn-secondary:hover {
-    background-color: #1da1f2;
-    color: white;
-  }
-  
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 5px; /* Adds spacing below label */
+}
+
+.form-group input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+  width: 100%; /* Makes the input fields take full width */
+  box-sizing: border-box; /* Prevents padding from affecting the width */
+}
+
+/* Register button and Cancel button styling */
+.register-btn {
+  background-color: #1da1f2;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%; /* Makes the button span the full width of the form */
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  color: #121212;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%; /* Makes the cancel button span the full width of the form */
+}
