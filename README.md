@@ -34,3 +34,7 @@
    ```bash
    git clone https://github.com/Vignesh-kumar-k/ResQure.git
    cd ResQure
+2.cd frontend
+```bash
+   npm i
+   npm start
