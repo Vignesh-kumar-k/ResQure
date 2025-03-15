@@ -119,8 +119,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 20px;
     margin-left: 270px; /* Adjust based on the sidebar width */
+    height: 100vh; /* To make sure it occupies the full screen height */
+    box-sizing: border-box;
 }
 
 .bento-grid {
@@ -130,33 +133,39 @@
     padding: 20px;
     width: 100%; /* Full width to accommodate the grid */
     box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
 }
 
 .bento-box {
     background: #333;
     color: white;
-    padding: 20px;
+    padding: 30px; /* Increased padding to avoid overflow */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-}
-
-.bento-box:hover {
-    transform: translateY(-5px);
-}
-
-.bento-box h3 {
-    margin-bottom: 10px;
+    max-width: 400px; /* Max width to prevent too wide boxes */
+    width: 100%; /* Ensures the bento box takes up full width but constrained by max-width */
+    margin: 0 auto; /* Centers the box horizontally */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 .bento-box input, .bento-box button {
-    width: 100%;
+    width: 100%; /* Ensures input and button take up the full width of the parent container */
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px; /* Adequate padding for input */
     border: none;
     border-radius: 5px;
     font-size: 14px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+
+.bento-box input {
+    margin-top: 15px;
+    outline: none;
 }
 
 .bento-box button {
@@ -167,4 +176,15 @@
 
 .bento-box button:hover {
     background-color: #0d8af2;
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        padding: 10px;
+    }
+
+    .bento-box {
+        width: 90%; /* Make the bento box width smaller on mobile */
+        margin: 20px auto; /* Ensure it's centered horizontally */
+    }
 }
