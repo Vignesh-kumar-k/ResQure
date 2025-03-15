@@ -1,0 +1,80 @@
+/* Center the form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #1e1e1e; /* Dark background */
+}
+
+/* Login form styling */
+.login-form {
+    background: #2c2f33;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 320px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input fields */
+.login-form input {
+    width: calc(100% - 20px); /* Ensures same width for all inputs */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Password container */
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Password input field */
+.password-container input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Space for the eye icon */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Eye button styling */
+.eye-button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Submit button styling */
+.login-form button {
+    background: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background: #45a049;
+}
