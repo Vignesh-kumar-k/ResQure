@@ -57,6 +57,7 @@ const Sidebar = () => {
 
         <ul className="menu">
           <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Analytics</a></li>
           <li><a href="#">Profile</a></li>
           <li><a href="#">Settings</a></li>
           <li><button className="logout-btn" onClick={handleLogout}>Logout</button></li>
@@ -67,20 +68,19 @@ const Sidebar = () => {
       <div className="bento-grid">
         <div className="bento-box">
           <h3>Audio & Phone Input</h3>
-          {/* Voice Recording */}
+
           <button onClick={startRecording}>🎤 Start Recording</button>
           {audioBlob && <audio controls src={URL.createObjectURL(audioBlob)} />}
 
-          {/* MP3 Upload */}
-          <input 
+          <input className="fileinput" 
             type="file" 
             accept="audio/mp3" 
             ref={fileInputRef} 
             onChange={handleFileUpload}
           />
 
-          {/* Phone Number Input */}
-          <input type="tel" placeholder="Enter phone number" />
+         
+          <input type="tel" placeholder="+91" />
         </div>
 
         {/* Future Features Can Be Added Here  */}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { auth } from "../firebaseConfig"; // Ensure this path is correct
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom"; // ✅ Correct import
 import "../styles/LoginPage.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -11,6 +11,7 @@ const LoginPage = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
+    const [isLogin, setIsLogin] = useState(true); // Toggle between login and registration
     const [error, setError] = useState("");
     const [success, setSuccess] = useState(""); 
 
@@ -20,18 +21,26 @@ const LoginPage = () => {
         setSuccess(""); 
 
         try {
-            await signInWithEmailAndPassword(auth, email, password);
-            setSuccess("Login successful!"); 
-            navigate("/sidebar"); // ✅ Ensure this route exists in your Router
+            if (isLogin) {
+                // Login logic
+                await signInWithEmailAndPassword(auth, email, password);
+                setSuccess("Login successful!"); 
+                navigate("/sidebar"); // ✅ Ensure this route exists in your Router
+            } else {
+                // Registration logic
+                await createUserWithEmailAndPassword(auth, email, password);
+                setSuccess("Registration successful!"); 
+                setIsLogin(true); // After registration, switch to login form
+            }
         } catch (error) {
-            setError("Invalid email or password"); 
+            setError(isLogin ? "Invalid email or password" : "Error during registration");
         }
     };
 
     return (
         <div className="login-container">
             <form className="login-form" onSubmit={handleSubmit}>
-                <h2>Login</h2>
+                <h2 className="login-form-text">{isLogin ? "Login" : "Register"}</h2>
 
                 {error && <p className="error-message">{error}</p>}
                 {success && <p className="success-message">{success}</p>}
@@ -61,7 +70,17 @@ const LoginPage = () => {
                     </button>
                 </div>
 
-                <button type="submit">Login</button>
+                <button type="submit">{isLogin ? "Login" : "Register"}</button>
+
+                <p className="login-text">
+                    {isLogin ? "Don't have an account?" : "Already have an account?"}
+                    <span 
+                        onClick={() => setIsLogin(!isLogin)} 
+                        className="toggle-link"
+                    >
+                        {isLogin ? "Register" : "Login"}
+                    </span>
+                </p>
             </form>
         </div>
     );

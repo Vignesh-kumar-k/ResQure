@@ -1,0 +1,107 @@
+/* Hero Section Container */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #121212, #1f1f1f); /* Dark background with a gradient */
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    position: relative; /* To position the admin button absolutely */
+  }
+  
+  /* Admin Button (Top-Right Corner) */
+  .admin-btn-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .admin-btn {
+    font-family: "Rubik Mono One", monospace;
+    font-style: normal;
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 100;
+  }
+  
+  .admin-btn:hover {
+    background-color: #0d8af2; /* Darker blue for hover effect */
+  }
+  
+  /* Hero Content Styling */
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Hero Title */
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1da1f2; /* Blue for the title */
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Hero Subtitle */
+  .hero-subtitle {
+    font-family:  monospace;
+    font-weight: 300; /* Lighter weight */
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #e0e0e0; /* Light grey for subtitle */
+  }
+  
+  /* Button Container */
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* Primary Button (Register Now) */
+  .cta-btn-primary {
+    background-color: #1da1f2;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-btn-primary:hover {
+    background-color: #0d8af2; /* Darker blue for hover effect */
+  }
+  
+  /* Secondary Button (Learn More) */
+  .cta-btn-secondary {
+    background-color: transparent;
+    color: #1da1f2;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: 2px solid #1da1f2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .cta-btn-secondary:hover {
+    background-color: #1da1f2;
+    color: white;
+  }
+  
