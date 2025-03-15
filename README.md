@@ -28,6 +28,22 @@
 1. *Node.js*: Ensure you have Node.js installed on your machine. You can download it from [here](https://nodejs.org/).
 2. *Firebase Account*: Create a Firebase project and configure Firebase Authentication.
 
+ResQure/
+├── frontend/                  # Frontend React application
+│   ├── public/                # Public files (e.g., index.html, images)
+│   ├── src/                   # React source code
+│   │   ├── components/        # React components
+│   │   ├── styles/            # CSS files for styling
+│   │   ├── App.js             # Main React app file
+│   │   ├── index.js           # Entry point for React app
+│   ├── .env                   # Environment variables for frontend
+│   ├── package.json           # Project dependencies and scripts
+├── pyServer/                  # Backend Python server
+│   ├── intent.py              # Main Python file for fake call detection logic
+│   ├── requirements.txt       # Python dependencies
+│   ├── utils/                 # Utility scripts for backend logic
+└── README.md                  # Project documentation
+
 ### Installation
 
 1. Clone the repository:
@@ -38,3 +54,11 @@
 ```bash
    npm i
    npm start
+
+
+2.cd frontend 
+```bash
+   npm i
+   npm start
+
+
